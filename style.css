@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 :root {
+
+
+
+  
   /* Color */
   --lightest: #ffffff;
   --ligthblue: #3f6880;
@@ -691,43 +695,7 @@ input[type=submit] {
   height: 0;
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f4f4f5;
-  transition: .4s;
-  border-radius: 30px;
-}
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: var(--size-of-icon,1.4em);
-  width: var(--size-of-icon,1.4em);
-  border-radius: 20px;
-  left: var(--slider-offset,0.3em);
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-  ;
- transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #303136;
-}
-
-input:checked + .slider:before {
-  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-  background: #303136;
-  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-}
 
 /* logo efect hover */
 
@@ -951,19 +919,30 @@ input:checked + .slider:before {
 /* Counter */
 
 
-.parallax{
-  /*  this is where the magic happens:  */
+.parallax {
+  /* Establece la imagen de fondo y sus propiedades */
+  background-image: url(src/img/parallax.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-image: url(src/img/parallax.jpg);
 
-  /*dimensions are important, ensure it is tall enough to scroll */ 
+  /* Establece una altura mínima para asegurar que la sección sea lo suficientemente alta */
   min-height: 50vh;
 
-  /* you are free to lay out the container items with flexbox or whatever means you wish */
+  /* Centra el contenido verticalmente y lo coloca en el centro del contenedor */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Agrega un relleno para mejorar la legibilidad del contenido */
+  padding: 20px;
+}
+
+.parallax h2, .parallax p {
+  color: white;
+  text-align: center; /* Centra el texto horizontalmente */
+  max-width: 800px; /* Establece un ancho máximo para el texto para que sea legible en pantallas grandes */
 }
 
 
@@ -1035,14 +1014,14 @@ input:checked + .slider:before {
   background-color: #fdfdfd;
   overflow: hidden;
   padding: 0px;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 }
 
 .inner-container {
   width: 50%;
   float: right;
   background: white;
-  padding: 150px;
+  padding: 90px;
 }
 
 .inner-container h1 {
@@ -1406,6 +1385,106 @@ input:checked + .slider:before {
   height: 120px;
   margin: 0 40px;
 }
+
+
+
+/* about us button */
+
+.aboutbutton {
+  font-family: 'Poppins';
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.aboutbutton {
+  background: #3f6880;
+  box-shadow: 0 0 25px #3f6880;
+}
+
+.aboutbutton:hover {
+  box-shadow: 0 0 5px #3f6880,
+              0 0 25px #3f6880,
+              0 0 50px #3f6880,
+              0 0 100px #3f6880;
+}
+
+
+/* end of about us button */
+
+/* parallax button*/
+
+.parallax-button {
+  display: block; /* Cambia display a 'block' en lugar de 'inline-block' */
+  margin: 0 auto; /* Centra el botón horizontalmente */
+  padding: 12px 24px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  color: #fff;
+  z-index: 1;
+  background-color: transparent;
+  text-align: center;
+ }
+ 
+ .parallax-button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: transparent;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+ }
+ 
+ .parallax-button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #3f6880;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+ }
+ 
+ .parallax-button:hover {
+  color: #ffffff;
+  border: 1px solid #3f6880;
+ }
+ 
+ .parallax-button:hover:before {
+  top: -35%;
+  background-color: #3f6880;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+ }
+ 
+ .parallax-button:hover:after {
+  top: -45%;
+  background-color: #3f6880;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+ }
+
+
 
 
 

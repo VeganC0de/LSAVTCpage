@@ -177,7 +177,30 @@ $('#number5').jQuerySimpleCounter({end: 472,duration: 3300});
 $('#number6').jQuerySimpleCounter({end: 224,duration: 2175});
 
 
-// Partners slider
+// darker and lighter button
+
+
+const botonModoOscuro = document.getElementById('modo-oscuro-toggle');
+const elementoRaiz = document.documentElement;
+
+
+const modoGuardado = localStorage.getItem('modo');
+if (modoGuardado) {
+  elementoRaiz.setAttribute('data-modo', modoGuardado);
+}
+
+
+botonModoOscuro.addEventListener('click', () => {
+ 
+  const modoActual = elementoRaiz.getAttribute('data-modo');
+  
+  
+  const nuevoModo = modoActual === 'oscuro' ? 'claro' : 'oscuro';
+  localStorage.setItem('modo', nuevoModo);
+  
+  
+  elementoRaiz.setAttribute('data-modo', nuevoModo);
+});
 
 
 
