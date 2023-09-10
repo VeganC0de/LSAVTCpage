@@ -946,11 +946,41 @@ input[type=submit] {
   max-width: 800px; /* Establece un ancho máximo para el texto para que sea legible en pantallas grandes */
 }
 
+
+
+
+.parallax-top {
+  /* Establece la imagen de fondo y sus propiedades */
+  background-image: url(src/img/parallax-1.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  /* Establece una altura mínima para asegurar que la sección sea lo suficientemente alta */
+  min-height: 50vh;
+
+  /* Centra el contenido verticalmente y lo coloca en el centro del contenedor */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Agrega un relleno para mejorar la legibilidad del contenido */
+  padding: 20px;
+}
+
+.parallax-top h2, .parallax-top p {
+  color: white;
+  text-align: center; /* Centra el texto horizontalmente */
+  max-width: 800px; /* Establece un ancho máximo para el texto para que sea legible en pantallas grandes */
+}
+
+
 /* Counter */
 
 .container {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   width: 60% !important;
   float: none;
   min-height: 1px;
@@ -1522,6 +1552,50 @@ input[type=submit] {
 }
 
 .social-buttons a:hover i{
+  background: linear-gradient(45deg,#22a6b3,#30336b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+
+
+
+
+
+
+.social-buttons-who a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  color: #3f6880;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px 0px 40px 20px;
+}
+
+.social-buttons-who a::before{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg,#22a6b3,#30336b);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons-who a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons-who a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons-who a:hover i{
   background: linear-gradient(45deg,#22a6b3,#30336b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
