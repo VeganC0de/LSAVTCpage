@@ -1730,7 +1730,7 @@ input[type=submit] {
 .p-name
 {
 	margin: 5px;
-	widt
+	
 }
 
 .p-des
@@ -1781,6 +1781,59 @@ input[type=submit] {
 }
 
 
+/* POLITICS SECTIONS */
+
+
+.politics-about-section-right {
+  background: url(/src/img/Tecnologia.jpeg) no-repeat right;
+  background-size: 55%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.politics-inner-container-right {
+  width: 50%;
+  float: left;
+  background: white;
+  padding: 50px;
+}
+
+.politics-inner-container-right h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .politics-inner-container-right {
+    padding: 80px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .politics-about-section-right {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+ 
+  .politics-inner-container-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .politics-about-section-right {
+    padding: 0;
+  }
+  
+  .politics-inner-container-right {
+    padding: 60px;
+  }
+}
 
 
 
