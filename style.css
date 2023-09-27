@@ -1699,11 +1699,10 @@ input[type=submit] {
 
 .team-section h1
 {
-	font-size: 20px;
-	text-transform: uppercase;
+	font-size: 35px;
 	display: inline-block;
 	border-bottom: 4px solid;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 
 .pe
@@ -1711,7 +1710,7 @@ input[type=submit] {
 	float: left;
 	width: calc(100% / 3);
 	overflow: hidden;
-	padding: 40px 0;
+	padding: 5px 0;
 	transition: 0.4s;
 }
 
@@ -1722,14 +1721,15 @@ input[type=submit] {
 
 .pe img
 {
-	width:250px;
-	height: 250px;
+	width:200px;
+	height: 200px;
 	border-radius: 50%;
 }
 
 .p-name
 {
-	margin: 5px;
+	margin: 10px;
+  font-size: 25px;
 	
 }
 
@@ -1748,8 +1748,8 @@ input[type=submit] {
 {
 	margin: 0 4px;
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	transition: 0.4s;
 }
 
@@ -1761,7 +1761,7 @@ input[type=submit] {
 .p-sm a i
 {
 	color: black;
-	line-height: 30px;
+	line-height: 10px;
 }
 
 @media screen and (max-width: 960px) {
