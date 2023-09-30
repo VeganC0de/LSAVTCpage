@@ -969,7 +969,27 @@ input[type=submit] {
   padding: 20px;
 }
 
-.parallax-top h2, .parallax-top p {
+.parallax-div {
+  /* Establece la imagen de fondo y sus propiedades */
+  background-image: url(src/img/divparallax.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  /* Establece una altura mínima para asegurar que la sección sea lo suficientemente alta */
+  min-height: 50vh;
+
+  /* Centra el contenido verticalmente y lo coloca en el centro del contenedor */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Agrega un relleno para mejorar la legibilidad del contenido */
+  padding: 20px;
+}
+
+.parallax-top h2, .parallax-top p, .parallax-div p, .parallax-div h2 {
   color: white;
   text-align: center; /* Centra el texto horizontalmente */
   max-width: 800px; /* Establece un ancho máximo para el texto para que sea legible en pantallas grandes */
