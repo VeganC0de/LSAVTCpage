@@ -7,12 +7,12 @@
   /* Color */
   --lightest: #ffffff;
   --ligthblue: #3f6880;
-  --brown-darker: #fff;
-  --primary-color: #3f6880;
-  --secondary-color: #ffffff;
-  --text-dark: #0f172a;
+  --black: #000000;
   --text-light: #94a3b8;
-  --white: #ffffff;
+  --azulbtappbck:#3f6880;
+  --celbtnappbck:#1a9be6;
+  --ptext: #333;
+  --counterhvr: #497188;
 
   /* Width */
   --lg: 80rem;
@@ -124,7 +124,7 @@ input[type=submit] {
 
 .btn:hover {
   background-color: var(--lightest);
-  color: black;
+  color: var(--black);
 }
 
 /*
@@ -232,7 +232,7 @@ input[type=submit] {
 }
 
 .wrapper--intro h5{
-  color: #fff;
+  color: var(--lightest);
 }
 
 .wrapper--footer {
@@ -482,8 +482,8 @@ input[type=submit] {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  background: rgb(255,255,255);
-  background: linear-gradient(135deg, #3f6880,#1a9be6);
+  background: var(--lightest);
+  background: linear-gradient(135deg, var(--azulbtappbck),var(--celbtnappbck));
   border-radius: 50%;
   transform: translateY(100%) scale(0);
   animation-duration: .6s;
@@ -624,7 +624,7 @@ input[type=submit] {
     background: transparent;
     border: none;
     position: relative;
-    color: #f0f0f0;
+    color: var(--lightest);
     z-index: 1;
     margin: 0;
   }
@@ -643,7 +643,7 @@ input[type=submit] {
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #3f6880,#1a9be6);
+    background: linear-gradient(135deg, var(--azulbtappbck),var(--celbtnappbck));
     border-radius: 10px;
   }
   
@@ -727,7 +727,7 @@ input[type=submit] {
   font-size: 15px;
   line-height: 1.5;
   font-weight: 300;
-  color: #333;
+  color: var(--ptext);
   font-family: "Poppins", sans-serif;
 }
 
@@ -765,7 +765,7 @@ input[type=submit] {
   position: absolute;
   width: 60px;
   height: 4px;
-  background: #fff;
+  background: var(--lightest);
   bottom: 0;
 }
 
@@ -833,7 +833,7 @@ input[type=submit] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #1a9be6, #3f6880);
+  background: linear-gradient(135deg, var(--celbtnappbck), var(--azulbtappbck));
   opacity: 0.25;
   z-index: -1;
 }
@@ -845,12 +845,12 @@ input[type=submit] {
 }
 
 .back {
-  background: #fff;
+  background: var(--lightest);
   transform: rotateY(-180deg);
   padding: 0 2em;
 }
 .back .button {
-  background: linear-gradient(135deg, #1a9be6, #3f6880);
+  background: linear-gradient(135deg,var(--celbtnappbck), var(--azulbtappbck));
 }
 .back .button:before {
   box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
@@ -863,7 +863,7 @@ input[type=submit] {
   transform: rotateY(180deg);
 }
 .card:nth-child(even) .back .button {
-  background: linear-gradient(135deg, #1a9be6, #3f6880);
+  background: linear-gradient(135deg, var(--celbtnappbck), var(--azulbtappbck));
 }
 .card:nth-child(even) .back .button:before {
   box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
@@ -879,7 +879,7 @@ input[type=submit] {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   font-weight: bold;
-  color: #fff;
+  color: var(--lightest);
   padding: 0.5em 1em;
   border-radius: 100px;
   font: inherit;
@@ -941,7 +941,7 @@ input[type=submit] {
 }
 
 .parallax h2, .parallax p {
-  color: white;
+  color: var(--lightest);
   text-align: center; /* Centra el texto horizontalmente */
   max-width: 800px; /* Establece un ancho máximo para el texto para que sea legible en pantallas grandes */
 }
@@ -990,7 +990,7 @@ input[type=submit] {
 }
 
 .parallax-top h2, .parallax-top p, .parallax-div p, .parallax-div h2 {
-  color: white;
+  color: var(--lightest);
   text-align: center; /* Centra el texto horizontalmente */
   max-width: 800px; /* Establece un ancho máximo para el texto para que sea legible en pantallas grandes */
 }
@@ -1031,24 +1031,24 @@ input[type=submit] {
   margin: 0;
 }
 .counter .item i{
-  color: #3f6880;
+  color: var(--azulbtappbck);
   font-size: 4em;
   text-shadow: 1px 1px 1px #ccc;
 }
 .counter .item p.number{
-  color: #3f6880;
+  color: var(--azulbtappbck);
   font-size: 3em;
   text-shadow: 1px 1px 1px #ccc;
 }
 .counter .item p.label{
-  color: #3f6880;
+  color: var(--azulbtappbck);
   font-size: 1.1em;
   text-shadow: 1px 1px 1px #ccc;
   text-transform: lowercase;
 }
 .counter .item:hover i, 
 .counter .item:hover p{
-  color: #497188;
+  color: var(--counterhvr);
 }
 
 @media (max-width: 786px){
@@ -1062,7 +1062,7 @@ input[type=submit] {
 .about-section {
   background: url(/src/img/aboutus.png) no-repeat left;
   background-size: 55%;
-  background-color: #fdfdfd;
+  background-color: var(--lightest);
   overflow: hidden;
   padding: 0px;
   margin-bottom: 40px;
@@ -1071,7 +1071,7 @@ input[type=submit] {
 .inner-container {
   width: 50%;
   float: right;
-  background: white;
+  background: var(--lightest);
   padding: 90px;
 }
 
@@ -1084,7 +1084,7 @@ input[type=submit] {
 .about-section-right {
   background: url(/src/img/Tecnologia.jpeg) no-repeat right;
   background-size: 55%;
-  background-color: #fdfdfd;
+  background-color: var(--lightest);
   overflow: hidden;
   padding: 0px;
   margin-bottom: 90px;
@@ -1093,7 +1093,7 @@ input[type=submit] {
 .inner-container-right {
   width: 50%;
   float: left;
-  background: white;
+  background: var(--lightest);
   padding: 90px;
 }
 
@@ -1105,7 +1105,7 @@ input[type=submit] {
 
 .text {
   font-size: 16px;
-  color: #545454;
+  color: var(--ptext);
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
@@ -1116,7 +1116,7 @@ input[type=submit] {
   justify-content: space-around;
   font-weight: 700;
   font-size: 13px;
-  color: black;
+  color: var(--ptext);
 }
 
 @media screen and (max-width: 1200px) {
@@ -1156,8 +1156,8 @@ input[type=submit] {
 /* FOOTER */
 
 .footer-distributed {
-  background-color: #292c2f;
-  background: #3f6880;
+  background-color: var(--ptext);
+  background: var(--ligthblue);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
@@ -1166,7 +1166,7 @@ input[type=submit] {
 }
 
 .footer-distributed .footer-left p {
-  color: #fff;
+  color: var(--lightest);
   font-size: 14px;
   margin: 0;
 }
@@ -1178,7 +1178,7 @@ input[type=submit] {
 .footer-distributed p.footer-links {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--lightest);
   margin: 0 0 10px;
   padding: 0;
   transition: ease .25s;
@@ -1196,7 +1196,7 @@ input[type=submit] {
   content: "·";
   font-size: 20px;
   left: 0;
-  color: #fff;
+  color: var(--lightest);
   display: inline-block;
   padding-right: 5px;
 }
@@ -1216,10 +1216,10 @@ input[type=submit] {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background: linear-gradient(135deg, #1a9be6, #3f6880);
+  background: linear-gradient(135deg, var(--celbtnappbck), var(--ligthblue));
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: var(--lightest);
   text-align: center;
   line-height: 35px;
   margin-left: 3px;
@@ -1257,7 +1257,7 @@ input[type=submit] {
 .section__container h1 {
   font-size: 40px;
   font-weight: 900;
-  color: var(--primary-color);
+  color: var(--ligthblue);
 }
 
 .section__container h1 {
@@ -1276,7 +1276,7 @@ input[type=submit] {
   transform: translateX(-50%);
   height: 2px;
   width: 5rem;
-  background-color: var(--primary-color);
+  background-color: var(--ligthblue);
 }
 
 .section__grid {
@@ -1290,7 +1290,7 @@ input[type=submit] {
   isolation: isolate;
   overflow: hidden;
   padding: 2rem;
-  background-color: var(--white);
+  background-color: var(--lightest);
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
@@ -1305,7 +1305,7 @@ input[type=submit] {
   width: 50%;
   aspect-ratio: 1;
   border-radius: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--ligthblue);
   z-index: -1;
   transition: 0.5s;
 }
@@ -1316,7 +1316,7 @@ input[type=submit] {
   left: 0;
   padding: 1rem;
   font-size: 2rem;
-  color: var(--white);
+  color: var(--lightest);
 }
 
 .section__card h4 {
@@ -1324,13 +1324,13 @@ input[type=submit] {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--ligthblue);
   transition: 0.3s;
 }
 
 .section__card p {
   margin-bottom: 1rem;
-  color: var(--text-light);
+  color: var(--ptext);
   transition: 0.3s;
 }
 
@@ -1338,14 +1338,14 @@ input[type=submit] {
   margin-bottom: 1rem;
   max-width: 80px;
   border-radius: 100%;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--ligthblue);
   transition: 0.3s;
 }
 
 .section__card h5 {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--ligthblue);
   transition: 0.3s;
 }
 
@@ -1361,7 +1361,7 @@ input[type=submit] {
 }
 
 .section__card:hover :is(h4, h5) {
-  color: var(--white);
+  color: var(--lightest);
 }
 
 .section__card:hover :is(p, h6) {
@@ -1369,7 +1369,7 @@ input[type=submit] {
 }
 
 .section__card:hover img {
-  border-color: var(--white);
+  border-color: var(--lightest);
 }
 
 
@@ -1398,7 +1398,7 @@ input[type=submit] {
 .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
+  background: var(--lightest);
   white-space: nowrap;
   position: relative;
 }
@@ -1415,12 +1415,12 @@ input[type=submit] {
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--lightest));
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--lightest));
 }
 
 .logos:hover .logos-slide {
@@ -1446,7 +1446,7 @@ input[type=submit] {
   padding: 10px 20px;
   border: none;
   font-size: 17px;
-  color: #fff;
+  color: var(--lightest);
   border-radius: 7px;
   letter-spacing: 4px;
   font-weight: 700;
@@ -1456,15 +1456,15 @@ input[type=submit] {
 }
 
 .aboutbutton {
-  background: #3f6880;
-  box-shadow: 0 0 25px #3f6880;
+  background: var(--ligthblue);
+  box-shadow: 0 0 25px var(--ligthblue);
 }
 
 .aboutbutton:hover {
-  box-shadow: 0 0 5px #3f6880,
-              0 0 25px #3f6880,
-              0 0 50px #3f6880,
-              0 0 100px #3f6880;
+  box-shadow: 0 0 5px var(--ligthblue),
+              0 0 25px var(--ligthblue),
+              0 0 50px var(--ligthblue),
+              0 0 100px var(--ligthblue);
 }
 
 
@@ -1476,13 +1476,13 @@ input[type=submit] {
   display: block; /* Cambia display a 'block' en lugar de 'inline-block' */
   margin: 0 auto; /* Centra el botón horizontalmente */
   padding: 12px 24px;
-  border: 1px solid #fff;
+  border: 1px solid var(--lightest);
   border-radius: 4px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
   font-size: 19px;
-  color: #fff;
+  color: var(--lightest);
   z-index: 1;
   background-color: transparent;
   text-align: center;
@@ -1511,7 +1511,7 @@ input[type=submit] {
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: #3f6880;
+  background-color: var(--ligthblue);
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -1519,19 +1519,19 @@ input[type=submit] {
  }
  
  .parallax-button:hover {
-  color: #ffffff;
-  border: 1px solid #3f6880;
+  color: var(--lightest);
+  border: 1px solid var(--ligthblue);
  }
  
  .parallax-button:hover:before {
   top: -35%;
-  background-color: #3f6880;
+  background-color: var(--ligthblue);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
  }
  
  .parallax-button:hover:after {
   top: -45%;
-  background-color: #3f6880;
+  background-color: var(--ligthblue);
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
  }
 
@@ -1546,7 +1546,7 @@ input[type=submit] {
   font-size: 18px;
   width: 60px;
   height: 60px;
-  color: #fff;
+  color: var(--lightest);
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1558,7 +1558,7 @@ input[type=submit] {
   position: absolute;
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg,#22a6b3,#30336b);
+  background: linear-gradient(45deg,var(--celbtnappbck),var(--counterhvr));
   border-radius: 50%;
   z-index: -1;
   transition: 0.3s ease-in;
@@ -1573,7 +1573,7 @@ input[type=submit] {
 }
 
 .social-buttons a:hover i{
-  background: linear-gradient(45deg,#22a6b3,#30336b);
+  background: linear-gradient(45deg,var(--celbtnappbck),var(--counterhvr));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
@@ -1590,7 +1590,7 @@ input[type=submit] {
   font-size: 20px;
   width: 60px;
   height: 60px;
-  color: #3f6880;
+  color: var(--ligthblue);
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1602,7 +1602,7 @@ input[type=submit] {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: linear-gradient(45deg,#22a6b3,#30336b);
+  background: linear-gradient(45deg,var(--celbtnappbck),var(--counterhvr));
   border-radius: 50%;
   z-index: -1;
   transition: 0.3s ease-in;
@@ -1617,7 +1617,7 @@ input[type=submit] {
 }
 
 .social-buttons-who a:hover i{
-  background: linear-gradient(45deg,#22a6b3,#30336b);
+  background: linear-gradient(45deg,var(--celbtnappbck),var(--counterhvr));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
@@ -1714,7 +1714,7 @@ input[type=submit] {
 	max-width: 1200px;
 	margin: auto;
 	padding: 40px;
-	color: black;
+	color: var(--black);
 	overflow: hidden;
 }
 
@@ -1757,7 +1757,7 @@ input[type=submit] {
 .p-des
 {
 	
-	color: var(--primary-color);
+	color: var(--ligthblue);
 }
 
 .p-sm
@@ -1781,7 +1781,7 @@ input[type=submit] {
 
 .p-sm a i
 {
-	color: black;
+	color: var(--black);
 	line-height: 10px;
 }
 
@@ -1808,7 +1808,7 @@ input[type=submit] {
 .politics-about-section-right {
   background: url(/src/img/Tecnologia.jpeg) no-repeat right;
   background-size: 55%;
-  background-color: #fdfdfd;
+  background-color: var(--lightest);
   overflow: hidden;
   padding: 0px;
   margin-bottom: 0px;
@@ -1817,7 +1817,7 @@ input[type=submit] {
 .politics-inner-container-right {
   width: 50%;
   float: left;
-  background: white;
+  background: var(--lightest);
   padding: 50px;
 }
 
